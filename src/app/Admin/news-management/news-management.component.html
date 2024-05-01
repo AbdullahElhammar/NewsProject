@@ -1,0 +1,65 @@
+<div class="container mt-5">
+    <h3>Add News</h3>
+    <form [formGroup]="AddNewsForm">
+        <div class="form-group">
+            <input type="text" class="form-control" formControlName="Title" placeholder="News Title"
+            required>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" formControlName="Description" placeholder="News Description"
+            required>
+        </div>
+        <div class="custom-file-upload">
+            <input
+              type="file"
+              id="files"
+              multiple
+              formControlName="Images"
+              required
+              (change)="OnSelectedImages($event)"
+            />
+            <div class="imgIcon-Button-flex">
+              <div class="icon">
+                <i class="fa-regular fa-image"></i>
+              </div>
+              <label for="files">Upload Images</label>
+            </div>
+          </div>
+          <button
+          type="submit"
+          (click)="submitAddData()"
+          class="btn btn-primary"
+          style="margin-left: 13px"
+        >
+          Upload Host
+        </button>
+    </form>
+
+    <!-- Update News Form -->
+    <h3>Update News</h3>
+    <form [formGroup]="UpdateNewsForm">
+        <div class="form-group">
+            <input type="number" class="form-control" formControlName="Id" placeholder="Id"
+            required>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" formControlName="Title" placeholder="News Title"
+            required>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" formControlName="Description" placeholder="News Description"
+            required>
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="submitUpdateData()">Update News</button>
+    </form>
+
+    <!-- Delete News Form -->
+    <h3>Delete News</h3>
+    <form [formGroup]="DeleteNewsForm">
+        <div class="form-group">
+            <input type="number" class="form-control" formControlName="Id" placeholder="Enter Id of Item you want to delete"
+            required>
+        </div>
+        <button type="submit" class="btn btn-danger" >Delete News</button>
+    </form>
+</div>

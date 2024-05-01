@@ -1,0 +1,13 @@
+.News:hover{
+box-shadow: var(--shadow);
+border: solid 1px black;
+}
+.News .btn{
+    transition: transform 1s , opacity 1s;
+    opacity: 0;
+    transform: translateY(100%);
+}
+.News:hover .btn{
+    opacity: 1;
+    transform: translateY(0%);
+}

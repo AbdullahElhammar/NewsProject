@@ -1,0 +1,13 @@
+form {
+    margin-top: 20px;
+}
+
+/* Optional: Center align form titles */
+h3 {
+    text-align: center;
+}
+
+/* Optional: Add some padding to the forms */
+.container {
+    padding: 20px;
+}
